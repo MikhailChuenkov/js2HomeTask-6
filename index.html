@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Задание 1</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h4>Урок 5</h4>
+<h3>Карусель товаров</h3>
+
+<div id="slide-show">
+  <button id="back">Назад</button>
+  <div class="slide active">1 слайд</div>
+  <div class="slide">2 слайд</div>
+  <div class="slide">3 слайд</div>
+  <button id="next">Вперед</button>
+</div>
+
+<form action="#">
+  <h2>Заполните все поля формы</h2>
+  <h4>Введите ваше имя</h4>
+  <input id="name" type="text" placeholder="Имя">
+  <div id="nameError" style='display: none'></div>
+  <h4>Введите ваш номер телефона</h4>
+  <input id="number" type="text" placeholder="+7(000)000-0000">
+  <div id="numberError" style='display: none'></div>
+  <h4>Введите ваш e-mail</h4>
+  <input id="mail" type="text" placeholder="E-mail">
+  <div id="mailError" style='display: none'></div>
+  <h4>Выберите ваш город</h4>
+  <select id="city"></select>
+  <h4 id='datebirthdayTitle'>Укажите вашу дату рождения</h4>
+  <input type='text' id='datebirthday'>
+  <h4>Напишите что-нибудь</h4>
+  <textarea id="text" cols="30" rows="5"></textarea>
+  <div id="textError" style='display: none'></div>
+  <input id="bnt" type="button" value="Отправить">
+
+</form>
+<script src="script-oop.js"></script>
+</body>
+</html>
