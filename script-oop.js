@@ -4,9 +4,9 @@ let mail = document.getElementById("mail");
 let textMy = document.getElementById("text");
 
 function regexName() {
-  let namePattern = /^([A-Za-zА-Яа-яЁё\s*]+)$/;
+  let namePattern = /[a-zA-Zа-яёА-Я]+/g;
   document.querySelector('div#nameError').innerText = '';
-  if (!namePattern.test(name.value)) {
+  if (!namePattern.test(name.value) || name.value == null) {
     let nameError = document.createElement("div");
     nameError.innerHTML = "Вы не ввели имя или ввели некорректно. Имя должно состоять только из букв";
     document.getElementById("nameError").appendChild(nameError);
@@ -67,9 +67,15 @@ number.addEventListener("input", regexNumber);
 mail.addEventListener("input", regexMail);
 textMy.addEventListener("input", regexText);
 
+
+
 (function ($) {
   $(function () {
 $("#bnt").click(function () {
+		regexText();
+		regexMail();
+		regexNumber();
+		regexName();
   $(".error").effect("shake", {times: 2}, "slow");
   $(".errorActiv").dialog();
 });
