@@ -61,12 +61,10 @@ function regexText() {
   }
 }
 
-
 name.addEventListener('input', regexName);
 number.addEventListener('input', regexNumber);
 mail.addEventListener('input', regexMail);
 textMy.addEventListener('input', regexText);
-
 
 (function ($) {
   $(function () {
@@ -99,15 +97,13 @@ textMy.addEventListener('input', regexText);
       firstDay: 1,
       dateFormat: 'dd.mm.yy'
     });
-    $('#datebirthdayTitle').draggable({axis: 'x', cursor: 'move'});
 
+    $('#datebirthdayTitle').draggable({axis: 'x', cursor: 'move'});
     $('#slide-show').on('click', '#next', function () {
       $('.active').removeClass('active');
-
     });
     $('#slide-show').on('click', '#back', function () {
       $('.active').removeClass('active');
-
     });
   })
 })(jQuery);
